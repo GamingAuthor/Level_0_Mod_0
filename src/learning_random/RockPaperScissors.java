@@ -37,9 +37,9 @@ public class RockPaperScissors extends JPanel implements ActionListener{
         URL url;
         try {
             //1. Find a picture of a rock, paper, and scissors on the internet. Replace the URL's below with your images
-            rockImage = ImageIO.read(new URL("https://image.freepik.com/free-icon/letter-x_318-26692.jpg"));  
-            paperImage = ImageIO.read(new URL("https://image.freepik.com/free-icon/letter-x_318-26692.jpg")); 
-            scissorsImage = ImageIO.read(new URL("https://image.freepik.com/free-icon/letter-x_318-26692.jpg")); 
+            rockImage = ImageIO.read(new URL("http://geology.com/articles/difficult-rocks/difficult-rock-identification.jpg"));  
+            paperImage = ImageIO.read(new URL("https://i5.walmartimages.com/asr/950a3698-948a-4b03-b9a2-749e60647413_1.4159329e4088f2c525b3a0bbf37b3caf.jpeg")); 
+            scissorsImage = ImageIO.read(new URL("https://images-na.ssl-images-amazon.com/images/I/713QA7eqzFL._SL1500_.jpg")); 
         } catch (MalformedURLException ex) {
             Logger.getLogger(RockPaperScissors.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
@@ -80,7 +80,8 @@ public class RockPaperScissors extends JPanel implements ActionListener{
         int selection = 0;
         //2. Run the program multiple times. Does the computer always choose the same thing?
         //3. Make oppenentSelection a random number between 0 and 2;
-        int opponentSelection = 0;
+        Random jimmy = new Random();
+        int opponentSelection = jimmy.nextInt(3);
         
         //4. Run the program again. Is the result better?
         
